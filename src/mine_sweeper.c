@@ -44,7 +44,7 @@ size_t mine_sweeper(int *buffer, char c, int offset, size_t size)
     }
     i = buffer[(offset + size) % buff_size];
     if (offset % size) {
-        j = buffer[(offset + size - 1) % buff_size];
+        j = buffer[(offset + size - 2) % buff_size];
         k = buffer[(offset - 1) % buff_size];
     }
     return (buffer[offset % buff_size] =  (1 + GET_MIN(i, j, k)));
